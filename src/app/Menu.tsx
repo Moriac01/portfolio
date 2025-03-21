@@ -1,8 +1,10 @@
 "use client"; // Assure que ce composant est client-side
 
-import { useState } from "react";
+import {  useState } from "react";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import Image from "next/image";
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,13 +13,19 @@ export default function Navbar() {
   console.log("Menu ouvert :", isOpen);
 
   return (
-    <nav className="flex justify-between items-center py-12 w-[88%] mx-auto  sticky  top-0">
-      <Link href="/">
-        <h1 className="text-2xl text-black font-semibold"> MK </h1>{" "}
+    <nav className={' fixed top-0 font-serif px-10 text-lg  py-5 pt-10  left-0 right-0 bg-white transition-all duration-300  flex justify-between items-center z-50'}>
+      <Link href="/" onClick={() => setIsOpen(false)}>
+        <Image
+        src="/Mk.ico"
+        alt="MK Logo"
+        width={40}
+        height={40}
+        />
       </Link>
 
       {/* Menu Desktop */}
-      <div className="hidden md:flex  items-center gap-6">
+      <div className="hidden md:flex  bg-white  items-center gap-6">
+
         <Link
           href="/Work"
           className="hover:underline hover:text-gray-500 text-black"
@@ -37,17 +45,21 @@ export default function Navbar() {
           Our Services
         </Link>
         {/* Menu deroulante de Projects */}
-        <div className="relative group">
-        <button className="hover:underline hover:text-gray-500 text-black" onClick={() => setIsOpen(false)}>
+        <div className="relative   group">
+        <button className="  hover:underline  hover:text-gray-500 text-black gap-2" onClick={() => setIsOpen(false)}>
            Projects
         </button>
-        <div className="absolute left-0 mt-2 w-48 bg-white shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-12 group-hover:left-0 transition-all duration-300">
-          <Link href="/Projects/Residential">
-
+        <div className="absolute  right-[50%]  mt-5 pt-5  w-60  opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-0 group-hover:right-0 transition-all duration-300  gap-4">
+          <Link href="/Projects/Residential" className="block ml-22 hover:bg-gray-200 text-black">
+          Residential Design
           </Link> 
-           <Link href="/Projects/Commercial">
+
+           <Link href="/Projects/Commercial" className="block ml-20  hover:bg-gray-200 text-black">
+          Commercial Design
            </Link>
-           <Link href="/Projects/Commercial">
+
+           <Link href="/Projects/Experiential" className="block ml-20  hover:bg-gray-200 text-black">
+           Experiential Design
           </Link>
         </div>
 
@@ -55,7 +67,7 @@ export default function Navbar() {
         <Link href="/Contact">
           <button
             onClick={() => setIsOpen(false)}
-            className="bg-black text-white px-8 py-6 rounded-md"
+            className="bg-black text-white px-10 py-6 rounded-md"
           >
             Contact Us
           </button>
@@ -72,8 +84,8 @@ export default function Navbar() {
 
       {/* Menu Mobile */}
       <div
-        className={`absolute top-20 justify-center text-4xl pt-45 left-0  gap-6 w-full  bg-white  flex flex-col  items-center 
-py-8 transition-all duration-300 
+        className={`absolute top-25 justify-center text-5xl pt-35 left-0  gap-6 w-full  bg-white  flex flex-col  items-center 
+          Py-6 px-4 transition-all duration-300 
         ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
       >
         <Link
@@ -105,11 +117,11 @@ py-8 transition-all duration-300
         >
           Projects
         </Link>
-        <div className=" mt-auto pt-25">
+        <div className=" mt-auto pt-35  pb-10">
           <Link href="/Contact">
             <button
               onClick={() => setIsOpen(false)}
-              className="bg-black hover:bg-gray-500 text-white text-lg  px-15 py-6 rounded-md"
+              className="bg-black hover:bg-gray-500 text-white text-lg  px-10 py-6 rounded-md"
             >
               Contact Us
             </button>
