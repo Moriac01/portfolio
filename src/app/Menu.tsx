@@ -8,12 +8,13 @@ import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+ 
 
   // Vérification du changement d'état
   console.log("Menu ouvert :", isOpen);
 
   return (
-    <nav className={' fixed top-0 font-serif px-10 text-lg  py-5 pt-10  left-0 right-0 bg-white transition-all duration-300  flex justify-between items-center z-50'}>
+    <nav className=" fixed top-0 font-serif px-12 text-lg  py-5 pt-10  left-0 right-0 bg-white transition-all duration-300  flex justify-between items-center z-50 ">
       <Link href="/" onClick={() => setIsOpen(false)}>
         <Image
         src="/Mk.ico"
@@ -49,7 +50,7 @@ export default function Navbar() {
         <button className="  hover:underline  hover:text-gray-500 text-black gap-2" onClick={() => setIsOpen(false)}>
            Projects
         </button>
-        <div className="absolute  right-[50%]  mt-5 pt-5  w-60  opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-0 group-hover:right-0 transition-all duration-300  gap-4">
+        <div className="absolute bg-white  right-[50%]  mt-5 pt-5  w-60  opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-0 group-hover:right-0 transition-all duration-300  gap-4">
           <Link href="/Projects/Residential" className="block ml-22 hover:bg-gray-200 text-black">
           Residential Design
           </Link> 
@@ -110,13 +111,13 @@ export default function Navbar() {
           Our Services
         </Link>
 
-        <Link
-          href="/Projects"
-          className="hover:underline hover:text-gray-500 text-black"
-          onClick={() => setIsOpen(false)}
-        >
-          Projects
-        </Link>
+       <Link href="Sous-Menu" 
+       className="hover:undeline hover:text-gray-500 text-black"
+       onClick={()=> setIsOpen(false)}>
+       Projects
+       </Link>
+
+        
         <div className=" mt-auto pt-35  pb-10">
           <Link href="/Contact">
             <button
