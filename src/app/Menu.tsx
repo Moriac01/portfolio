@@ -25,7 +25,7 @@ export default function Navbar() {
       </Link>
 
       {/* Menu Desktop */}
-      <div className="hidden md:flex  bg-white  items-center gap-6">
+      <div className="hidden md:flex  bg-white  items-center gap-8">
 
         <Link
           href="/Work"
@@ -51,15 +51,15 @@ export default function Navbar() {
            Projects
         </button>
         <div className="absolute bg-white  right-[50%]  mt-5 pt-5  w-60  opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-0 group-hover:right-0 transition-all duration-300  gap-4">
-          <Link href="/Projects/Residential" className="block ml-22 hover:bg-gray-200 text-black">
+          <Link href="/Residential" className="block ml-22 hover:bg-gray-200 text-black">
           Residential Design
           </Link> 
 
-           <Link href="/Projects/Commercial" className="block ml-20  hover:bg-gray-200 text-black">
+           <Link href="/Commercial" className="block ml-20  hover:bg-gray-200 text-black">
           Commercial Design
            </Link>
 
-           <Link href="/Projects/Experiential" className="block ml-20  hover:bg-gray-200 text-black">
+           <Link href="/Experiential" className="block ml-20  hover:bg-gray-200 text-black">
            Experiential Design
           </Link>
         </div>

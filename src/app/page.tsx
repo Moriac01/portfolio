@@ -1,3 +1,6 @@
+"use client"
+
+import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import Footer from "./Footer"
@@ -56,7 +59,7 @@ export default function page(){
           </p>
         </div>
         <div className="justify-end px-6 flex">
-          <Link href="Commercial" className="rounded-lg bg-black  text-white py-6 px-10">
+          <Link href="/Commercial" className="rounded-lg bg-black  text-white py-6 px-10">
             See Project
           </Link>
         </div>

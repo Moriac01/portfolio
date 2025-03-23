@@ -1,10 +1,14 @@
 "use client"
+
 import React from "react";
 
-export default function page  () {
+export default function page () {
   return (
-    <div className="text-black">
-        <h1>MOriac</h1>
-    </div>
-  )
-}
+    <>
+      <div className="pt-45 text-black">
+        page
+      </div>
+    </>
+    
+)
+};

@@ -1,18 +1,19 @@
 import React from "react";
 import Footer from "../Footer";
+import Image from "next/image";
 
 export default function page  ()  {
   return (
     <>
-    <div className="pt-30 px-12 grid md:flex  text-black">
-      <div className="pt-20  md:flex justify-between md:grid-cols-2 ">
-        <div className="leading-relaxed tracking-wide md:grid">
-          <h1 className="font-serif text-3xl capitalize  pb-2">
+    <div className="pt-30  px-12 grid  text-black">
+      <div className="pt-25 md:pt-40 mr- grid-cols-2 md:grid md:grid-cols-2  ">
+        <div className="leading-relaxed text-3xl tracking-wide md:grid">
+          <h1 className="font-serif md:text-5xl capitalize  pb-2">
             who we are
           </h1>
         
         </div>
-        <div className="leading-8 tracking-wide pb-8 pt-5">
+        <div className="leading-8 tracking-wide pb-8 pt-4">
         <p > 
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
           sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -38,6 +39,16 @@ export default function page  ()  {
         </p>
         </div>
        
+      </div>
+
+      <div className=" grid md:justify-end pt-45 pb-20">
+        <Image
+        src="/about-us.jpg"
+        alt=""
+        width={1500}
+        height={100}
+        className="md:h-175 h-120 md:container"
+        />
       </div>
     </div>
 
