@@ -3,7 +3,7 @@
 import {  useState } from "react";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import Image from "next/image";
+
 
 
 export default function Navbar() {
@@ -14,14 +14,9 @@ export default function Navbar() {
   console.log("Menu ouvert :", isOpen);
 
   return (
-    <nav className=" fixed top-0 font-serif px-12 text-lg  py-5 pt-10  left-0 right-0 bg-white transition-all duration-300  flex justify-between items-center z-50 ">
+    <nav className=" fixed top-0 font-serif px-12 text-xl  font-bold text-black py-5 pt-10  left-0 right-0 bg-white transition-all duration-300  flex justify-between items-center z-50 ">
       <Link href="/" onClick={() => setIsOpen(false)}>
-        <Image
-        src="/Mk.ico"
-        alt="MK Logo"
-        width={40}
-        height={40}
-        />
+        Moriac<span className=" dark:text-sky-700 text-sky-700">01</span>
       </Link>
 
       {/* Menu Desktop */}
@@ -118,7 +113,7 @@ export default function Navbar() {
        </Link>
 
         
-        <div className=" mt-auto pt-35  pb-10">
+        <div className=" mt-auto h-screen pt-30 pb-10">
           <Link href="/Contact">
             <button
               onClick={() => setIsOpen(false)}
