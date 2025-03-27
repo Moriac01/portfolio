@@ -14,9 +14,9 @@ export default function Navbar() {
   console.log("Menu ouvert :", isOpen);
 
   return (
-    <nav className=" fixed top-0 font-serif px-12 text-xl  font-bold text-black py-5 pt-10  left-0 right-0 bg-white transition-all duration-300  flex justify-between items-center z-50 ">
-      <Link href="/" onClick={() => setIsOpen(false)}>
-        Moriac<span className=" dark:text-sky-700 text-sky-700">01</span>
+    <nav className=" fixed top-0 font-serif px-12 text-lg dark:text-black py-5 pt-10  left-0 right-0 bg-white transition-all duration-300  flex justify-between items-center z-50 ">
+      <Link href="/" onClick={() => setIsOpen(false)} className="dark:text-black font-bold text-2xl"> 
+        Moriac<span className="text-cyan-700 font-bold">01</span>
       </Link>
 
       {/* Menu Desktop */}
