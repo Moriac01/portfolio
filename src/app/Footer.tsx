@@ -4,7 +4,7 @@ export default function Footer(){
     return(
         <footer className=" pb-8 pt-8 bg-gray-200   md:pt-10  text-black    sm:px-12 md:px-8 lg:px-12 ">
 
-          <div className="   grid gap-8 md:flex md:justify-between ">
+          <div className=" grid gap-8 md:flex md:justify-between ">
             <div className="grid gap-8">
               <h1 className="text-[20px] font-serif ">Moriac KPANGAM</h1>
               <p className="  text-sm leading-6 tracking-wider">PK0 Avenue Boganda  <br /> 
